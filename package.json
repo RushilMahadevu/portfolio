@@ -5,12 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "deploy": "next build && firebase deploy --only hosting",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "feather-icons-react": "^0.8.1",
+    "firebase": "^11.4.0",
     "framer-motion": "^12.4.7",
     "next": "^15.2.0",
     "postcss": "^8.5.3",
