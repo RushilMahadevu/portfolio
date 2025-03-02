@@ -1,11 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
-import FeatherIcon from "feather-icons-react";
+import FeatherIcon, { FeatherIconName } from "feather-icons-react";
 
 interface TechItem {
   name: string;
-  icon: string;
+  icon: FeatherIconName;
 }
 
 export default function TechStackShowcase() {
