@@ -1,34 +1,14 @@
 "use client";
 import { motion } from "framer-motion";
 import FeatherIcon from "feather-icons-react";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import AchievementsTimeline from "./AchievementsTimeline";
 import TechStackShowcase from "./TechStackShowcase";
 
 export default function Home() {
   const [hovered, setHovered] = useState(false);
-  const [scrollEnabled, setScrollEnabled] = useState(false);
   const techStackRef = useRef<HTMLDivElement>(null);
 
-  // Add useEffect to scroll to top on page refresh and handle scroll lock
-  useEffect(() => {
-    window.scrollTo(0, 0);
-    
-    // Lock scrolling initially
-    document.body.style.overflow = "hidden";
-    
-    // Enable scrolling after the arrow appears (matching the delay of the arrow animation)
-    const scrollTimer = setTimeout(() => {
-      setScrollEnabled(true);
-      document.body.style.overflow = "auto";
-    }, 1800);
-    
-    return () => {
-      clearTimeout(scrollTimer);
-      document.body.style.overflow = "auto"; // Clean up
-    };
-  }, []);
-  
   return (
     <>
       <main className="h-screen flex flex-col items-center justify-center relative">
@@ -99,7 +79,7 @@ export default function Home() {
           <motion.div
             animate={{ y: hovered ? [0, 5, 0] : 0 }}
             transition={{ repeat: hovered ? Infinity : 0, duration: 1.2 }}
-            className={`cursor-pointer p-2 ${scrollEnabled ? '' : 'pointer-events-none'}`}
+            className="cursor-pointer p-2"
           >
             <FeatherIcon icon="chevron-down" size={32} />
           </motion.div>
