@@ -4,6 +4,7 @@ import FeatherIcon from "feather-icons-react";
 import { useState, useRef } from "react";
 import AchievementsTimeline from "./AchievementsTimeline";
 import TechStackShowcase from "./TechStackShowcase";
+import ProjectsShowcase from "./ProjectsShowcase";
 
 export default function Home() {
   const [hovered, setHovered] = useState(false);
@@ -89,6 +90,7 @@ export default function Home() {
       <div ref={techStackRef}>
         <AchievementsTimeline />
         <TechStackShowcase />
+        <ProjectsShowcase />
       </ div>
     </>
   );
