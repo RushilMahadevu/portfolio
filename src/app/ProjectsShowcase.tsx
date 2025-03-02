@@ -16,12 +16,28 @@ const projects: Project[] = [
   {
     id: 1,
     title: "Kalimu Website",
-    description: "A responsive AI education website built with Javascript, CSS, and HTML.",
-    technologies: ["React", "Vite", "Framer Motion", "Gemini-2.0-flash-exp"],
+    description: "A responsive AI education website that is designed to help students.",
+    technologies: ["JavaScript", "React", "Vite", "Framer Motion", "Gemini-2.0-flash-exp"],
     imageUrl: "/images/kalimu.png",
+    liveUrl: "https://kalimu-35418.web.app/",
     githubUrl: "https://github.com/RushilMahadevu/kalimu"
   },
-
+  {
+    id: 2,
+    title: "Pebblo", 
+    description: "A platform for daily micro-challenges that promote personal growth and community impact.",
+    technologies: ["TypeScript", "React Native", "Expo", "Supabase", "IOS", "Framer Motion"],
+    imageUrl: "/images/pebblo.png",
+    githubUrl: "https://github.com/RushilMahadevu/Pebblo"
+  },
+  {
+    id: 3,
+    title: "RB-BFS-MazeEngine",
+    description: "A maze solver and generator that employs recursive backtracking and breadth-first search algorithms.",
+    technologies: ["Python", "BFS", "Recursive Backtracking"],
+    imageUrl: "/images/maze.png",
+    githubUrl: "https://github.com/RushilMahadevu/RB-BFS-MazeEngine"
+  }
   // more here
 ];
 
