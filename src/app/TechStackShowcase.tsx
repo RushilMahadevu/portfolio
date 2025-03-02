@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { FaPython, FaJs, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa';
-import { SiFirebase, SiSupabase, SiTypescript } from 'react-icons/si';
+import { SiFirebase, SiSupabase, SiTypescript, SiMarkdown } from 'react-icons/si';
 
 interface TechItem {
   name: string;
@@ -17,6 +17,7 @@ export default function TechStackShowcase() {
     { name: "Node.js", icon: <FaNodeJs size={28} /> },
     { name: "HTML", icon: <FaHtml5 size={28} /> },
     { name: "CSS", icon: <FaCss3Alt size={28} /> },
+    { name: "Markdown", icon: <SiMarkdown size={28} /> },
     { name: "Git", icon: <FaGitAlt size={28} /> },
     { name: "Firebase", icon: <SiFirebase size={28} /> },
     { name: "Supabase", icon: <SiSupabase size={28} /> }
