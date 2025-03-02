@@ -8,6 +8,7 @@ import ProjectsShowcase from "./ProjectsShowcase";
 
 export default function Home() {
   const [hovered, setHovered] = useState(false);
+  const [waveHovered, setWaveHovered] = useState(false);
   const techStackRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -54,7 +55,16 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className="text-6xl font-bold"
         >
-          Welcome 👋
+          Welcome {" "}
+          <motion.span
+            onMouseEnter={() => setWaveHovered(true)}
+            onMouseLeave={() => setWaveHovered(false)}
+            animate={waveHovered ? { rotateZ: [0, 15, -10, 10, -5, 0] } : {}}
+            transition={{ duration: 1, ease: "easeInOut" }}
+            style={{ display: "inline-block", transformOrigin: "bottom right" }}
+          >
+            👋
+          </motion.span>
         </motion.h1>
         
         <motion.p
