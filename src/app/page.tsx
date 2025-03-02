@@ -8,20 +8,7 @@ import TechStackShowcase from "./TechStackShowcase";
 export default function Home() {
   const [hovered, setHovered] = useState(false);
   const techStackRef = useRef<HTMLDivElement>(null);
-  
-  const scrollToTechStack = () => {
-    const element = document.getElementById("tech-stack");
-    if (element) {
-      const yOffset = -80; // Add some offset to avoid hiding content behind any fixed headers
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      
-      window.scrollTo({
-        top: y,
-        behavior: "smooth"
-      });
-    }
-  };
-  
+
   return (
     <>
       <main className="h-screen flex flex-col items-center justify-center relative">
@@ -39,7 +26,7 @@ export default function Home() {
             className="text-gray-300 hover:text-white transition-colors duration-300"
             aria-label="GitHub"
           >
-            <FeatherIcon icon="github" size={20} />
+            <FeatherIcon icon="github" size={24} />
           </motion.a>
           <motion.a
             href="https://www.linkedin.com/in/rushil-mahadevu-b2a86333a/"
@@ -48,7 +35,7 @@ export default function Home() {
             className="text-gray-300 hover:text-white transition-colors duration-300"
             aria-label="LinkedIn"
           >
-            <FeatherIcon icon="linkedin" size={20} />
+            <FeatherIcon icon="linkedin" size={24} />
           </motion.a>
           <motion.a
             href="mailto:rushil.mahadevu@gmail.com?subject=Hello%20from%20Portfolio"
@@ -56,7 +43,7 @@ export default function Home() {
             className="text-gray-300 hover:text-white transition-colors duration-300"
             aria-label="Email"
           >
-            <FeatherIcon icon="mail" size={20} />
+            <FeatherIcon icon="mail" size={24} />
           </motion.a>
         </motion.div>
         
@@ -88,7 +75,6 @@ export default function Home() {
           className="absolute bottom-12"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
-          onClick={scrollToTechStack}
         >
           <motion.div
             animate={{ y: hovered ? [0, 5, 0] : 0 }}
