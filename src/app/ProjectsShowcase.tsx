@@ -68,7 +68,7 @@ function ProjectCard({ project }: { project: Project }) {
       ref={ref}
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
+      transition={{ delay: .75 , duration: 1, ease: "easeInOut" }}
       className="rounded-lg overflow-hidden border shadow-sm"
       style={{ background: 'var(--primary)', borderColor: 'var(--secondary)' }}
       whileHover={{ 
