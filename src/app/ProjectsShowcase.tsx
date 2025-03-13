@@ -12,6 +12,8 @@ interface Project {
   githubUrl?: string;
 }
 
+
+
 const projects: Project[] = [
   {
     id: 1,
@@ -27,7 +29,8 @@ const projects: Project[] = [
     title: "Pebblo", 
     description: "A platform for daily micro-challenges that promote personal growth and community impact.",
     technologies: ["TypeScript", "React Native", "Expo", "Supabase", "IOS", "Framer Motion"],
-    imageUrl: "/images/pebblo.png",
+    imageUrl: "/images/Pebblo.png",
+    
     githubUrl: "https://github.com/RushilMahadevu/Pebblo"
   },
   {
@@ -53,6 +56,21 @@ export default function ProjectsShowcase() {
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
+      
+      <div className="text-center mt-12">
+        <p className="text-sm" style={{ color: 'var(--accent)', opacity: 0.9 }}>
+          These are just a few highlights. View more projects on my{' '}
+          <a 
+            href="https://github.com/RushilMahadevu" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="font-medium underline hover:opacity-80 transition-opacity"
+            style={{ color: 'var(--accent)' }}
+          >
+            GitHub profile
+          </a>
+        </p>
+      </div>
     </section>
   );
 }
@@ -62,6 +80,14 @@ function ProjectCard({ project }: { project: Project }) {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  // Determine image style based on project title
+  const imageStyle = {
+    objectFit: project.title === "Pebblo" ? "contain" : "cover",
+    transform: project.title === "Pebblo" ? "scale(.90)" : "none"
+
+    
+  } as const;
 
   return (
     <motion.div
@@ -82,7 +108,7 @@ function ProjectCard({ project }: { project: Project }) {
           src={project.imageUrl} 
           alt={project.title}
           fill
-          style={{ objectFit: "cover" }}
+          style={imageStyle}
           placeholder="blur"
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg=="
         />

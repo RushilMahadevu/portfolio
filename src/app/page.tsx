@@ -59,7 +59,7 @@ export default function Home() {
           <motion.span
             onMouseEnter={() => setWaveHovered(true)}
             onMouseLeave={() => setWaveHovered(false)}
-            animate={waveHovered ? { rotateZ: [0, 15, -10, 10, -5, 0] } : {}}
+  animate={waveHovered ? { rotateZ: [0, 15, -10, 10, -5, 0] } : {}}
             transition={{ duration: 1, ease: "easeInOut" }}
             style={{ display: "inline-block", transformOrigin: "bottom right" }}
           >
