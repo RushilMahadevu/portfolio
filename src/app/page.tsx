@@ -5,6 +5,7 @@ import { useState, useRef } from "react";
 import AchievementsTimeline from "./AchievementsTimeline";
 import TechStackShowcase from "./TechStackShowcase";
 import ProjectsShowcase from "./ProjectsShowcase";
+import EducationSection from "./EducationSection";
 
 export default function Home() {
   const [hovered, setHovered] = useState(false);
@@ -16,7 +17,7 @@ export default function Home() {
       <main className="h-screen flex flex-col items-center justify-center relative">
         {/* Social links in top right */}
         <motion.div
-          className="absolute top-8 right-8 flex gap-5"
+          className="fixed top-0 right-0 flex gap-5 z-50 p-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -100,8 +101,9 @@ export default function Home() {
         </motion.div>
       </main>
 
-      <div ref={techStackRef}>
+      <div ref={techStackRef} className="space-y-32 mb-32">
         <AchievementsTimeline />
+        <EducationSection />
         <TechStackShowcase />
         <ProjectsShowcase />
       </div>

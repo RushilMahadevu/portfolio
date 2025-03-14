@@ -12,51 +12,51 @@ interface Achievement {
 const achievements: Achievement[] = [
   {
     id: 1,
-    year: "2023",
-    title: "Perfect PSAT Math Score",
-    description: "Achieved a 1360/1400 PSAT score with a perfect math score of 720 (> 99%).",
-    side: "right"
-  },
-  {
-    id: 2,
-    year: "2025",
-    title: "National Speech & Debate Association",
-    description: "Earned membership and reached Senior Level Debate within just two tournaments.",
-    side: "left"
-  },
-  {
-    id: 3,
-    year: "2022",
-    title: "WCA Speed Cubing Competition",
-    description: "Competed in World Cube Association competitions with a record of 18.11 seconds for 3x3.",
-    side: "right"
-  },
-  {
-    id: 4,
-    year: "2021",
-    title: "President's Education Award",
-    description: "Received the President's Education Awards Program recognition for academic excellence.",
-    side: "left"
-  },
-  {
-    id: 5,
     year: "2014-2021",
     title: "Kumon Mathematics Awards",
     description: "Accomplished 6 Kumon Mathematics Platinum Awards.",
     side: "right"
   },
   {
-    id: 6,
-    year: "2025",
+    id: 2,
+    year: "2017-2025",
     title: "Advanced Mathematics Placement",
-    description: "Began pursuing advanced sophomore/junior year Algebra II course as a freshman.",
+    description: "Placed in advanced mathematics courses from middle to high school.",
+    side: "left"
+  },
+  {
+    id: 3,
+    year: "2019 & 2021",
+    title: "President's Education Award",
+    description: "Received the President's Education Awards Program recognition for academic excellence.",
+    side: "right"
+  },
+  {
+    id: 4,
+    year: "2020-2022",
+    title: "WCA Speed Cubing Competition",
+    description: "Competed in World Cube Association competitions with a record of 18.11 seconds for 3x3.",
+    side: "left"
+  },
+  {
+    id: 5,
+    year: "2023-2024",
+    title: "NNV Math Tournaments",
+    description: "Competed in math tournaments under the Northern Nevada Math Organization",
+    side: "right"
+  },
+  {
+    id: 6,
+    year: "2024-2025",
+    title: "Work Experience: Kumon",
+    description: "Delivered personalized math and reading instruction while providing feedback and support to students of various ages.",
     side: "left"
   },
   {
     id: 7,
-    year: "2019-2025",
-    title: "Head of School's List",
-    description: "Received Head of School's List award throughout all years at Sage Ridge School.",
+    year: "2025",
+    title: "National Speech & Debate Association",
+    description: "Earned membership and reached Senior Level Debate within just two tournaments.",
     side: "right"
   }
 ];
